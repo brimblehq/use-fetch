@@ -5,6 +5,7 @@ function App() {
   const { error, data, revalidate } = useFetch({
     url: "https://random-data-api.com/api/users/random_user?size=5",
     revalidate: true,
+    interval: 3,
   });
 
   if (!data) {
